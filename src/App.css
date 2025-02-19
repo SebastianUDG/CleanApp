@@ -1,38 +1,82 @@
-.App {
+/* Paleta de colores */
+:root {
+  --primary-color: #6C7A89; /* Azul grisáceo */
+  --secondary-color: #ABB7B7; /* Gris claro */
+  --accent-color: #3498DB; /* Azul brillante */
+  --background-color: #F4F6F7; /* Fondo claro */
+  --text-color: #2C3E50; /* Texto oscuro */
+  --hover-color: #2980B9; /* Azul más oscuro para hover */
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header p {
+  margin: 5px 0 0;
+  font-size: 1.2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
+  padding: 20px;
+}
+
+.services, .contact {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.service-buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.service-btn, .contact-btn {
+  background-color: var(--accent-color);
   color: white;
+  border: none;
+  padding: 15px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.service-btn:hover, .contact-btn:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
