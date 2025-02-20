@@ -2,7 +2,7 @@
   "name": "cleanapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tu-usuario.github.io/cleanapp",
+  "homepage": "https://SebastianUDG.github.io/CleanApp",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
