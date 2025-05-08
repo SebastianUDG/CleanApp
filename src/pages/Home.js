@@ -1,22 +1,32 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../App.css';
 
-function Servicio() {
-  const { nombre } = useParams();
+function Home() {
+  const navigate = useNavigate();
+  const servicios = ['Lavado Básico', 'Lavado Express', 'Planchado', 'Lavado en Seco', 'Servicio Premium'];
 
   return (
-    <div className="form-container">
-      <h2>Solicitar: {nombre}</h2>
-      <form>
-        <input type="text" placeholder="Nombre completo" required />
-        <input type="tel" placeholder="Teléfono" />
-        <textarea placeholder="Detalles del servicio"></textarea>
-        <button type="submit">Solicitar</button>
-      </form>
-      <Link to="/home">← Volver</Link>
+    <div className="App">
+      <header>
+        <h1>Clean-Clean</h1>
+        <p>Lavandería Premium</p>
+      </header>
+      <main>
+        <h2>Nuestros Servicios</h2>
+        <div className="service-buttons">
+          {servicios.map((s) => (
+            <button key={s} className="service-btn" onClick={() => navigate(`/servicio/${s}`)}>
+              {s}
+            </button>
+          ))}
+        </div>
+      </main>
+      <footer>
+        <p>&copy; 2025 Clean-Clean. Todos los derechos reservados.</p>
+      </footer>
     </div>
   );
 }
 
-export default Servicio;
+export default Home;
